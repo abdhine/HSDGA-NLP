@@ -3,7 +3,7 @@
 ## **🛡️ Hybrid DGA Detection System**  
 🚀 **Advanced Deep Learning & Graph-Based Approach for Detecting Domain Generation Algorithm (DGA) Domains**  
 
-![DGA Detection](https://upload.wikimedia.org/wikipedia/commons/9/9c/Example_image.jpg) *(Replace with your own image related to cybersecurity or DGA detection.)*
+![DGA Detection](https://upload.wikimedia.org/wikipedia/commons/9/9c/Example_image.jpg) *(image related to cybersecurity or DGA detection.)*
 
 ---
 
