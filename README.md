@@ -1,121 +1,95 @@
 ---
 
-## **🛡️ Hybrid DGA Detection System**  
-🚀 **Advanced Deep Learning & Graph-Based Approach for Detecting Domain Generation Algorithm (DGA) Domains**  
+# **🛡️ Hybrid DGA Detection with FastText, CNN, BiLSTM, and Multihead Attention**  
+🚀 **Advanced Deep Learning Approach for Detecting Domain Generation Algorithm (DGA) Domains**  
 
 ![DGA Detection](https://upload.wikimedia.org/wikipedia/commons/9/9c/Example_image.jpg) *(image related to cybersecurity or DGA detection.)*
 
----
 
 ## **📌 Table of Contents**
 - [🔍 Introduction](#-introduction)
-- [📖 Background](#-background)
-- [🎯 Project Objectives](#-project-objectives)
-- [🛠️ Methodology](#-methodology)
 - [📊 Dataset](#-dataset)
 - [🏗️ Model Architecture](#-model-architecture)
-- [💻 Installation](#-installation)
+- [🛠️ Installation](#-installation)
 - [🚀 Usage](#-usage)
 - [📈 Results](#-results)
 - [📢 Contributing](#-contributing)
+- [📜 Citation](#-citation)
 - [📜 License](#-license)
 
 ---
 
-## **🔍 Introduction**
-**Domain Generation Algorithms (DGA)** are used by malware to generate large numbers of domain names dynamically, making it difficult for traditional security systems to block them. This project aims to **build an advanced hybrid AI model** that effectively detects and classifies **DGA-generated domains** using **Deep Learning (CNN, BiLSTM, GPT)** and **Graph Neural Networks (GCN)**.
+## **🔍 Introduction**  
+Malware often uses **Domain Generation Algorithms (DGAs)** to evade detection by dynamically generating domain names. Traditional detection methods struggle against **zero-day threats**, making **deep learning-based solutions** essential.  
+
+This project builds a **hybrid deep learning model** combining:  
+✅ **FastText** for word embeddings  
+✅ **CNN** for feature extraction  
+✅ **BiLSTM** for sequence modeling  
+✅ **Multihead Attention** for focusing on key domain patterns  
+
+This model effectively distinguishes **DGA-generated domains** from **legitimate ones**, achieving high accuracy and robustness.
 
 ---
 
-## **📖 Background**
-🔹 Traditional **signature-based detection** fails to detect **zero-day** DGA domains.  
-🔹 **Machine learning & deep learning** techniques have **improved detection** but often fail with **new DGA families**.  
-🔹 **Graph Neural Networks (GCN) & NLP models (GPT)** can capture domain structures more effectively.
-
----
-
-## **🎯 Project Objectives**
-✅ **Accurate DGA Detection**: Build a model that outperforms traditional classifiers.  
-✅ **Generalization to Zero-Day DGAs**: Leverage NLP-based models like **GPT** for enhanced feature learning.  
-✅ **Graph-Based Analysis**: Apply **Graph CNN (GCN)** to detect structural relationships between domains.  
-✅ **Robust Preprocessing Pipeline**: Handle raw datasets efficiently, ensuring proper cleaning and balancing.  
-
----
-
-## **🛠️ Methodology**
-We employ a **hybrid deep learning and machine learning pipeline**:
-1. **Data Preprocessing**  
-   - **Cleaning** raw domain lists.  
-   - **Tokenization** (Character & Word-Level).  
-   - **Feature Extraction** (TF-IDF, FastText, GPT Embeddings).  
-2. **Graph Construction**  
-   - Convert domain datasets into a **graph representation**.  
-   - Apply **Levenshtein Distance** for node connections.  
-3. **Model Training**  
-   - **Graph CNN (GCN)** for relationship learning.  
-   - **GPT-based Transformer** for contextual domain analysis.  
-   - **Support Vector Machine (SVM)** as a final classifier.  
-
----
-
-## **📊 Dataset**
-We use a combination of **legitimate and malicious domains**:  
+## **📊 Dataset**  
+We use a balanced dataset of **1 million domains**:  
 | Dataset | Source | Size | Label |  
 |----------|----------|------|------|  
-| **Alexa** | Alexa Top 1M | 1M | Legitimate (0) |  
-| **UMUDGA** | 50+ DGA Families | 500K | DGA (1) |  
-| **360NetLab** | Malware Analysis | 337K | DGA (1) |  
+| **Legitimate Domains** | Alexa Top 1M | 500K | Legitimate (0) |  
+| **DGA Domains** | UMUDGA Dataset | 500K | Malicious (1) |  
+
+**📌 DGA Source:**  
+Zago, Mattia; Gil Pérez, Manuel; Martínez Pérez, Gregorio (2020), “UMUDGA - University of Murcia Domain Generation Algorithm Dataset”, *Mendeley Data*, V1, [doi:10.17632/y8ph45msv8.1](https://doi.org/10.17632/y8ph45msv8.1)  
 
 ---
 
-## **🏗️ Model Architecture**
-**Hybrid Approach:**
-✅ **GCN (Graph CNN)** → Learns structural relationships between domains.  
-✅ **GPT (NLP-Based Model)** → Captures sequence-level patterns in domain names.  
-✅ **LLN (Logistic Label Normalization)** → Improves classification generalization.  
-✅ **SVM (Final Classifier)** → Robust decision-making based on extracted features.  
+## **🏗️ Model Architecture**  
+Our hybrid model follows this pipeline:  
 
-![Model Architecture](https://upload.wikimedia.org/wikipedia/commons/3/3c/Neural_Network_Model.jpg) *(Replace with your own model diagram.)*
+1️⃣ **FastText Embeddings** – Convert domain names into meaningful vector representations.  
+2️⃣ **CNN Layer** – Extracts spatial patterns from character sequences.  
+3️⃣ **BiLSTM Layer** – Captures sequential dependencies and long-range context.  
+4️⃣ **Multihead Attention** – Focuses on important character sequences.  
+5️⃣ **Dense Layer** – Outputs the probability of a domain being DGA or legitimate.  
 
----
-
-## **💻 Installation**
-### **🔹 Prerequisites**
-Ensure you have **Python 3.8+** and the following dependencies installed:
-
-```bash
-pip install torch transformers torch-geometric scikit-learn pandas networkx matplotlib fasttext imbalanced-learn
-```
-
-### **🔹 Clone the Repository**
-```bash
-git clone https://github.com/zenbenali/HSDGA-NLP
-cd DGA-Detection-Hybrid
+**Architecture Diagram:**  
+```plaintext
+Input → FastText Embeddings → CNN → BiLSTM → Multihead Attention → Fully Connected → Output
 ```
 
 ---
 
-## **🚀 Usage**
-### **🔹 1. Data Preprocessing**
-Run the preprocessing script to clean and balance datasets.
+## **🛠️ Installation**  
+### **🔹 Prerequisites**  
+Ensure you have Python 3.8+ and the following dependencies installed:  
 ```bash
-python preprocess.py --input data/ --output processed_data/
+pip install tensorflow torch torchvision torchaudio torchtext seaborn scikit-learn pandas numpy matplotlib tqdm
 ```
 
-### **🔹 2. Train the Model**
-Train the hybrid model with GCN + GPT + SVM.
+### **🔹 Clone the Repository**  
 ```bash
-python train.py --epochs 20 --batch_size 32 --use_gcn --use_gpt
+git clone https://github.com/zenbenali/Hybrid-DGA-Detection.git
+cd Hybrid-DGA-Detection
 ```
 
-### **🔹 3. Evaluate the Model**
-Run evaluation scripts to get **accuracy, precision, recall, and AUC scores**.
-```bash
-python evaluate.py --input test_data/
-```
+---
 
-### **🔹 4. Real-Time Prediction**
-To predict if a domain is DGA-generated:
+## **🚀 Usage**  
+### **🔹 1. Train the Model**  
+```python
+python train.py --epochs 5 --batch_size 256
+```
+The model was trained for **5 epochs** due to time constraints, achieving **97.30% accuracy**.  
+
+### **🔹 2. Evaluate the Model**  
+```python
+python evaluate.py
+```
+It calculates **accuracy, precision, recall, F1-score, ROC-AUC**, and more.  
+
+### **🔹 3. Predict a Single Domain**  
+To predict whether a domain is **DGA-generated** or **legitimate**:  
 ```python
 from model import predict_dga
 
@@ -126,23 +100,43 @@ print(f"Domain {domain} is {'DGA' if prediction == 1 else 'Legitimate'}")
 
 ---
 
-## **📈 Results**
-| Model | Accuracy (%) | AUC Score | Best For |  
-|------------|-------------|------------|------------|  
-| **Random Forest** | 92.3% | 0.91 | Baseline |  
-| **CNN + BiLSTM** | 97.7% | 0.96 | DGA Detection |  
-| **GCN + GPT + SVM (Ours)** | **98.8%** | **0.98** | Generalization & Zero-Day DGAs |  
-
-📌 **Key Findings:**
-✅ **GCN captures structural similarities**, improving classification.  
-✅ **GPT embeddings generalize well** for **previously unseen DGA families**.  
-✅ **Hybrid model outperforms traditional ML models**.  
+## **📈 Results**  
+The model achieved **high performance** on the test set:  
+| Metric | Score |  
+|------------|--------|  
+| **Accuracy** | 97.30% |  
+| **Precision** | 97.68% |  
+| **Recall** | 96.90% |  
+| **F1 Score** | 97.29% |  
+| **ROC AUC** | 99.66% |  
 
 ---
 
-## **📢 Contributing**
-We welcome contributions! To contribute:
-1. **Fork the repository**.
+## **📊 Visualizations**  
+These plots help analyze model performance:  
+
+✅ **Confusion Matrix** – Shows correct vs incorrect classifications  
+✅ **Precision-Recall Curve** – Evaluates precision vs recall trade-offs  
+✅ **Loss & Accuracy Curves** – Tracks performance over training epochs  
+✅ **Predicted Probability Distribution** – Checks confidence levels  
+
+### **Confusion Matrix**  
+![Confusion Matrix](confusion_matrix.png)  
+
+### **Precision-Recall Curve**  
+![PR Curve](precision_recall_curve.png)  
+
+### **Training Curves**  
+![Loss & Accuracy](training_curves.png)  
+
+### **Prediction Distribution**  
+![Predicted Probabilities](predictions_distribution.png)  
+
+---
+
+## **📢 Contributing**  
+Want to improve the model? Follow these steps:  
+1. **Fork the repository**.  
 2. **Create a new branch**:  
    ```bash
    git checkout -b feature-branch
@@ -152,9 +146,42 @@ We welcome contributions! To contribute:
    git commit -m "Added new feature"
    git push origin feature-branch
    ```
-4. **Submit a Pull Request (PR).**
+4. **Submit a Pull Request (PR).**  
 
 ---
+
+## **📜 Citation**  
+If you use this work, please cite:  
+```bibtex
+@dataset{zago2020umudga,
+  author = {Mattia Zago, Manuel Gil Pérez, Gregorio Martínez Pérez},
+  title = {UMUDGA - University of Murcia Domain Generation Algorithm Dataset},
+  year = {2020},
+  publisher = {Mendeley Data},
+  version = {V1},
+  doi = {10.17632/y8ph45msv8.1}
+}
+```
+
+---
+
+## **📜 License**  
+This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
+
+---
+
+## **🌟 Acknowledgments**  
+Special thanks to:  
+- **UMUDGA Dataset creators** for providing **DGA samples**.  
+- **Alexa Top 1M** for legitimate domain lists.  
+- **TensorFlow, PyTorch, and FastText teams** for open-source contributions.  
+
+🚀 **Star this repo if you find it useful!** ⭐  
+
+---
+
+## **📌 Final Notes**  
+This README provides **everything needed** to understand, run, and improve your **DGA detection system**. Would you like to add anything specific? 😊
 
 ## **📜 License**
 This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
@@ -175,5 +202,5 @@ Special thanks to:
 
 ---
 
-### **📌 Final Notes**
+### **📌 Abdhine Ben Ali**
 
