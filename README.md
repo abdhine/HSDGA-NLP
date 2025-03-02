@@ -172,11 +172,10 @@ This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) f
 
 ## **🌟 Acknowledgments**  
 Special thanks to:  
-- **UMUDGA Dataset creators** for providing **DGA samples**.  
+- **UMUDGA Dataset creators and NetLab 360** for providing **DGA samples**.  
 - **Alexa Top 1M** for legitimate domain lists.  
-- **TensorFlow, PyTorch, and FastText teams** for open-source contributions.  
-
-🚀 **Star this repo if you find it useful!** ⭐  
+- **TensorFlow, PyTorch, and FastText teams** for open-source contributions.
+- **Researchers in AI & Cybersecurity** for inspiration.
 
 ---
 
@@ -186,14 +185,6 @@ This README provides **everything needed** to understand, run, and improve your 
 ## **📜 License**
 This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
 
----
-
-## **🌟 Acknowledgments**
-Special thanks to:
-- **UMUDGA & 360NetLab** for providing **DGA datasets**.
-- **Researchers in AI & Cybersecurity** for inspiration.
-
----
 
 ### **📌 Want to Improve DGA Detection?**
 🔗 [**Check out the full project on GitHub!**](https://github.com/zenbenali/HSDGA-NLP)  
