@@ -44,7 +44,7 @@ We use a balanced dataset of **1 million domains**:
 | Dataset | Source | Size | Label |  
 |----------|----------|------|------|  
 | **Legitimate Domains** | Alexa Top 1M | 1 Million | Legitimate (0) |  
-| **DGA Domains** | UMUDGA Dataset
+| **DGA Domains** | UMUDGA Dataset| 500K
 NetLab360 | 500K / 500k | Malicious (1) |  
 
 **📌 DGA Source:**  
