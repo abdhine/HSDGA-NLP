@@ -18,7 +18,14 @@
 - [📜 License](#-license)
 
 ---
+📚 Motivation
 
+DGAs are used by malware to generate many domain names dynamically, helping them evade blacklists. 
+arXiv
+
+Pure character-level or statistical models often struggle with “wordlist-based” DGAs, where domain names are built by concatenating dictionary words.
+
+A hybrid NLP model can leverage semantic information (from words) and structural patterns (from characters) to improve detection accuracy.
 ## **🔍 Introduction**  
 Malware often uses **Domain Generation Algorithms (DGAs)** to evade detection by dynamically generating domain names. Traditional detection methods struggle against **zero-day threats**, making **deep learning-based solutions** essential.  
 
@@ -56,9 +63,16 @@ Our hybrid model follows this pipeline:
 **Architecture Diagram:**  
 ```plaintext
 Input → FastText Embeddings → CNN → BiLSTM → Multihead Attention → Fully Connected → Output
+
 ```
 
----
+✅ Why This Approach Works Well
+
+Semantic Strength: By using word-level embeddings, the model understands meaning in domain parts (e.g., “bank”, “login”, “secure”), which is useful for DGA families that use dictionary words.
+
+Structural Insight: Character-level modeling captures patterns like unusual letter combinations, length, or randomness.
+
+Hybrid Power: Combining both gives better detection performance than using either alone.
 
 ## **🛠️ Installation**  
 ### **🔹 Prerequisites**  
