@@ -3,7 +3,7 @@
 # **🛡️ Hybrid DGA Detection with FastText, CNN, BiLSTM, and Multihead Attention**  
 🚀 **Advanced Deep Learning Approach for Detecting Domain Generation Algorithm (DGA) Domains**  
 
-![DGA Detection](https://upload.wikimedia.org/wikipedia/commons/9/9c/Example_image.jpg) *(image related to cybersecurity or DGA detection.)*
+![DGA Detection]([https://upload.wikimedia.org/wikipedia/commons/9/9c/Example_image.jpg](https://idefence.com.tr/wp-content/uploads/2025/04/7eb362c4b52c23ef2b185f1bf3eeeb53.png)) *(image related to cybersecurity or DGA detection.)*
 
 
 ## **📌 Table of Contents**
