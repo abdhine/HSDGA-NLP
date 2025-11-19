@@ -43,8 +43,9 @@ This model effectively distinguishes **DGA-generated domains** from **legitimate
 We use a balanced dataset of **1 million domains**:  
 | Dataset | Source | Size | Label |  
 |----------|----------|------|------|  
-| **Legitimate Domains** | Alexa Top 1M | 500K | Legitimate (0) |  
-| **DGA Domains** | UMUDGA Dataset | 500K | Malicious (1) |  
+| **Legitimate Domains** | Alexa Top 1M | 1 Million | Legitimate (0) |  
+| **DGA Domains** | UMUDGA Dataset
+NetLab360 | 500K / 500k | Malicious (1) |  
 
 **📌 DGA Source:**  
 Zago, Mattia; Gil Pérez, Manuel; Martínez Pérez, Gregorio (2020), “UMUDGA - University of Murcia Domain Generation Algorithm Dataset”, *Mendeley Data*, V1, [doi:10.17632/y8ph45msv8.1](https://doi.org/10.17632/y8ph45msv8.1)  
@@ -118,11 +119,11 @@ print(f"Domain {domain} is {'DGA' if prediction == 1 else 'Legitimate'}")
 The model achieved **high performance** on the test set:  
 | Metric | Score |  
 |------------|--------|  
-| **Accuracy** | 97.30% |  
-| **Precision** | 97.68% |  
-| **Recall** | 96.90% |  
-| **F1 Score** | 97.29% |  
-| **ROC AUC** | 99.66% |  
+| **Accuracy** | 99.38% |  
+| **Precision** | 99.69% |  
+| **Recall** | 99.07% |  
+| **F1 Score** | 99.39% |  
+| **ROC AUC** | 99.97% |  
 
 ---
 
