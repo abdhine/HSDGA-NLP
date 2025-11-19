@@ -44,8 +44,8 @@ We use a balanced dataset of **1 million domains**:
 | Dataset | Source | Size | Label |  
 |----------|----------|------|------|  
 | **Legitimate Domains** | Alexa Top 1M | 1 Million | Legitimate (0) |  
-| **DGA Domains** | UMUDGA Dataset| 500K
-NetLab360 | 500K / 500k | Malicious (1) |  
+| **DGA Domains** | UMUDGA Dataset| 500K | Malicious (1) |  
+| **DGA Domaıns** | NetLab360 Dataset| 500K | Malicious (1) |  
 
 **📌 DGA Source:**  
 Zago, Mattia; Gil Pérez, Manuel; Martínez Pérez, Gregorio (2020), “UMUDGA - University of Murcia Domain Generation Algorithm Dataset”, *Mendeley Data*, V1, [doi:10.17632/y8ph45msv8.1](https://doi.org/10.17632/y8ph45msv8.1)  
